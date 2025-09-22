@@ -17,19 +17,19 @@ const NavbarLogo = ({ logoTextColor, menuTextColor }: NavbarLogoProp) => {
     <div className="z-30 justify-self-start">
       <Link
         href="/"
-        className={`flex flex-row tracking-widest hover:text-primary-500 hover:backdrop-blur-md rounded-lg p-[0.8rem] ${logoTextColor} ${menuTextColor} font-semibold`}
+        className={`flex flex-row tracking-widest hover:text-primary-500 hover:backdrop-blur-md rounded-lg p-[0.8rem] ${logoTextColor} ${menuTextColor} font-semibold items-center justify-center`}
         aria-label="Logo"
       >
         <CldImage
-          src="https://res.cloudinary.com/dcss55nem/image/upload/v1702588027/favicon_5_a5rhl0.png"
+          src="https://res.cloudinary.com/dcss55nem/image/upload/v1758503198/Remove_background_project_d6xtfj.png"
           fetchPriority="high"
-          height={30}
-          width={30}
+          height={40}
+          width={40}
           className="pr-1 self-end"
           alt="logo"
         />{" "}
-        <h1 className="self-end font-bold tracking-widest">
-          {"milio's Portfolio"}
+        <h1 className="font-bold tracking-widest uppercase">
+          {"Pedaleando En Cristo"}
         </h1>
       </Link>
     </div>
