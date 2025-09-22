@@ -1,8 +1,8 @@
 "use client";
 import React, { useRef, useState, FormEvent } from "react";
 import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
-import Link from "next/link";
+import Email from "@/features/contact/components/Email";
+import Phone from "@/features/contact/components/phone"
 
 const variants = {
   initial: {
@@ -20,9 +20,7 @@ const variants = {
 };
 
 // Components
-import ContactInfo from "@/features/contact/components/Contact";
 import ContactForm from "@/features/contact/components/ContactForm";
-
 
 /**
  * Displays the contact section where users can reach out via email or phone.
@@ -37,12 +35,33 @@ const Contact = () => {
       <motion.div
         {...({
           className:
-            "flex flex-col sm:flex-row items-center gap-50 p-12 md:p-24 max-w-full w-full h-full py-[20%]",
+            "flex flex-col sm:flex-row gap-50 p-12 md:p-24 max-w-full w-full h-full py-[20%]",
           initial: "initial",
           whileInView: "animate",
         } as any)}
       >
-        {/* <ContactInfo variants={variants} /> */}
+        <motion.div
+          {...({
+            variants: variants,
+            className: "flex-1 flex flex-col gap-4 h-full",
+          } as any)}
+        >
+          <motion.h1
+            {...({
+              variants: variants,
+              className:
+                "text-primary-1000 text-5xl md:text-6xl font-bold leading-none  w-full",
+            } as any)}
+          >
+            {"Contacto"}
+          </motion.h1>
+          <motion.div {...({ variants: variants, className: "w-full" } as any)}>
+            <Email />
+          </motion.div>
+          <motion.div {...({ variants: variants, className: "w-full" } as any)}>
+            <Phone />
+          </motion.div>
+        </motion.div>
         <ContactForm />
       </motion.div>
     </section>

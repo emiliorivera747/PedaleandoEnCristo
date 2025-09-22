@@ -2,6 +2,24 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
+interface Variants {
+  initial: {
+    y: number;
+    opacity: number;
+  };
+  animate: {
+    y: number;
+    opacity: number;
+    transition: {
+      duration: number;
+      staggerChildren: number;
+    };
+  };
+}
+
+interface ContactInfoProps {
+  variants: Variants;
+}
 
 const ContactInfo = ({ variants }: any) => {
   return (
@@ -34,6 +52,12 @@ const ContactInfo = ({ variants }: any) => {
         <h1 className="text-zinc-800 font-bold ">Teléfono</h1>
         <span className="text-zinc-800 text-sm">+1 (408) 772-6162</span>
       </motion.div>
+      <motion.div
+        {...({
+          variants: variants,
+          className: "w-full h-full pt-10",
+        } as any)}
+      ></motion.div>
     </motion.div>
   );
 };
