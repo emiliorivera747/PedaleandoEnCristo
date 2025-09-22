@@ -11,4 +11,16 @@ export const navBarData = [
       },
     ],
   },
+  {
+    id: 2,
+    label: "Misión",
+    url: "/mision",
+    content: [
+      {
+        id: 1,
+        label: "Misión",
+        url: "/mision",
+      },
+    ],
+  },
 ];

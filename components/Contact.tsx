@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React, { useRef, useState, FormEvent } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
@@ -26,10 +26,10 @@ interface ContactProps {
 
 /**
  * Displays the contact section where users can reach out via email or phone.
- * 
- * 
- * @param {*} param0 
- * @returns 
+ *
+ *
+ * @param {*} param0
+ * @returns
  */
 const Contact: React.FC<ContactProps> = ({ textEnter, textLeave }) => {
   const form = useRef<HTMLFormElement | null>(null);
@@ -56,28 +56,32 @@ const Contact: React.FC<ContactProps> = ({ textEnter, textLeave }) => {
       );
   };
 
-
   return (
-    <section className="h-screen w-screen bg-white overflow-auto">
+    <section className="h-screen w-screen bg-white flex items-center justify-center">
       <motion.div
         {...({
-          className: "flex flex-col sm:flex-row items-start gap-50 p-12 md:p-24 max-w-full w-full h-full ",
+          className:
+            "flex flex-col sm:flex-row items-start gap-50 p-12 md:p-24 max-w-full w-full h-full ",
           initial: "initial",
           whileInView: "animate",
         } as any)}
       >
         <motion.div
-          {...({ variants: variants, className: "flex-1 flex flex-col gap-4 h-full" } as any)}
+          {...({
+            variants: variants,
+            className: "flex-1 flex flex-col gap-4 h-full",
+          } as any)}
         >
           <motion.h1
             {...({
               onMouseEnter: textEnter,
               onMouseLeave: textLeave,
               variants: variants,
-              className: "text-primary-1000 text-5xl md:text-6xl font-bold leading-none  w-full",
+              className:
+                "text-primary-1000 text-5xl md:text-6xl font-bold leading-none  w-full",
             } as any)}
           >
-            {"Let's Work Together"}
+            {"Contacto"}
           </motion.h1>
           <motion.div {...({ variants: variants, className: "w-full" } as any)}>
             <h1
@@ -88,11 +92,11 @@ const Contact: React.FC<ContactProps> = ({ textEnter, textLeave }) => {
               Mail
             </h1>
             <Link
-              href="mailto:emiliorivera174@gmail.com"
+              href="mailto:pedaliandoencristo@gmail.com"
               className="text-zinc-800 text-sm"
               aria-label="Email"
             >
-              emiliorivera174@gmail.com
+              pedaliandoencristo@gmail.com
             </Link>
           </motion.div>
           <motion.div {...({ variants: variants, className: "w-full" } as any)}>
@@ -101,7 +105,7 @@ const Contact: React.FC<ContactProps> = ({ textEnter, textLeave }) => {
               onMouseLeave={textLeave}
               className="text-zinc-800 font-bold "
             >
-              Phone
+              Teléfono
             </h1>
             <span
               onMouseEnter={textEnter}
@@ -111,7 +115,12 @@ const Contact: React.FC<ContactProps> = ({ textEnter, textLeave }) => {
               +1 (571) 970-8057
             </span>
           </motion.div>
-          <motion.div {...({ variants: variants, className: "w-full h-full pt-10" } as any)}>
+          <motion.div
+            {...({
+              variants: variants,
+              className: "w-full h-full pt-10",
+            } as any)}
+          >
             <div className="flex flex-row gap-6 items-center ">
               <Link
                 href="https://github.com/emiliorivera747"
