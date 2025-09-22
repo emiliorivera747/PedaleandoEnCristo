@@ -1,6 +1,6 @@
 import React from "react";
 
-const phone = () => {
+const Phone = () => {
   return (
     <>
       {" "}
@@ -10,4 +10,4 @@ const phone = () => {
   );
 };
 
-export default phone;
+export default Phone;

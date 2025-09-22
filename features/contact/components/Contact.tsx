@@ -2,7 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Email from "@/features/contact/components/Email";
-import Phone from "@/features/contact/components/phone";
+import Phone from "@/features/contact/components/Phone";
 
 const variants = {
   initial: {
