@@ -3,17 +3,12 @@ import "@/styles/globals.css";
 import { motion, AnimatePresence } from "framer-motion";
 
 //Components
-import Testimonial from "@/components/Testimonial";
 import PrimaryLandingPageSection from "@/features/primary-landing-page/components/PrimaryLandingPageSection";
 import Page from "@/components/Page";
 
 //Sections
 import Contact from "@/components/Contact";
-import ProjectSection from "@/components/ProjectSection";
-import ToolsSection from "@/components/ToolsSection";
 
-//Data
-import { toolsData } from "@/utils/data/tools/allToolsData";
 
 // Data
 import { navBarData } from "@/utils/data/navbar/navbarData";
