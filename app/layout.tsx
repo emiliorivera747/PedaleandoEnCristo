@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <Script
+        {/* <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-R0GTFSV0LN"
         ></Script>
@@ -35,7 +35,7 @@ export default function RootLayout({
   gtag('js', new Date());
 
   gtag('config', 'G-R0GTFSV0LN');`}
-        </Script>
+        </Script> */}
       </head>
       <body>
 
