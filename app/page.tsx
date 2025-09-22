@@ -7,7 +7,8 @@ import PrimaryLandingPageSection from "@/features/primary-landing-page/component
 import Page from "@/components/Page";
 
 //Sections
-import Contact from "@/components/Contact";
+
+import Contact from "@/features/contact/components/Contact";
 
 
 // Data

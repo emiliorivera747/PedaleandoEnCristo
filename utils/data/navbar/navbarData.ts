@@ -1,6 +1,6 @@
 export const navBarData = [
   {
-    id: 2,
+    id: 1,
     label: "Acerca",
     url: "/acerca",
     content: [
