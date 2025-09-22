@@ -7,15 +7,14 @@ import PrimaryLandingPageSection from "@/features/primary-landing-page/component
 import Page from "@/components/Page";
 
 //Sections
-
 import Contact from "@/features/contact/components/Contact";
-
 
 // Data
 import { navBarData } from "@/utils/data/navbar/navbarData";
 import Navbar from "@/components/navbar/Navbar";
 
 import Footer from "@/components/footers/Footer";
+
 /**
  *  Main App component that wraps around all pages.
  *

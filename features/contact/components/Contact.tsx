@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Email from "@/features/contact/components/Email";
 import Phone from "@/features/contact/components/Phone";
+import { CldImage } from "next-cloudinary";
 
 const variants = {
   initial: {
@@ -37,9 +38,6 @@ import SocialItem from "@/features/contact/components/SocialItem";
 /**
  * Displays the contact section where users can reach out via email or phone.
  *
- *
- * @param {*} param0
- * @returns
  */
 const Contact = () => {
   return (
@@ -70,10 +68,21 @@ const Contact = () => {
           <motion.div {...({ variants: variants, className: "w-full" } as any)}>
             <Email />
           </motion.div>
-          <motion.div {...({ variants: variants, className: "w-full" } as any)}>
+          <motion.div {...({ variants: variants, className: "w-full pb-6" } as any)}>
             <Phone />
           </motion.div>
-          <motion.div {...{ className: "flex flex-row gap-4 pt-10" }}>
+          <motion.div {...({ className: ' pb-8 ' } as any)}>
+            <CldImage
+              className=""
+              alt={""}
+              src={
+                "https://res.cloudinary.com/dcss55nem/image/upload/v1758503198/Remove_background_project_d6xtfj.png"
+              }
+              width={300}
+              height={300}
+            />
+          </motion.div>
+          {/* <motion.div {...{ className: "flex flex-row gap-4 pt-10" }}>
             {SocialItems.map(({ href, image_url, alt }, index) => {
               return (
                 <SocialItem
@@ -85,7 +94,8 @@ const Contact = () => {
                 />
               );
             })}
-          </motion.div>
+          </motion.div> */}
+          <motion.div></motion.div>
         </motion.div>
         <ContactForm />
       </motion.div>
