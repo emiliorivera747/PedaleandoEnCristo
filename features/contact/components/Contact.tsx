@@ -19,8 +19,20 @@ const variants = {
   },
 };
 
+const SocialItems = [
+  {
+    href: "#",
+    image_url:
+      "/https://res.cloudinary.com/dcss55nem/image/upload/v1758511510/104498_facebook_icon_uvkot1.png",
+    alt: "",
+  },
+  { href: "#", image_url: "/", alt: "" },
+  { href: "#", image_url: "/", alt: "" },
+];
+
 // Components
 import ContactForm from "@/features/contact/components/ContactForm";
+import SocialItem from "@/features/contact/components/SocialItem";
 
 /**
  * Displays the contact section where users can reach out via email or phone.
@@ -60,6 +72,19 @@ const Contact = () => {
           </motion.div>
           <motion.div {...({ variants: variants, className: "w-full" } as any)}>
             <Phone />
+          </motion.div>
+          <motion.div {...{ className: "flex flex-row gap-4 pt-10" }}>
+            {SocialItems.map(({ href, image_url, alt }, index) => {
+              return (
+                <SocialItem
+                  key={image_url + index}
+                  to={"#"}
+                  image_url={
+                    "https://res.cloudinary.com/dcss55nem/image/upload/v1758512288/communication_hkbfdo.png"
+                  }
+                />
+              );
+            })}
           </motion.div>
         </motion.div>
         <ContactForm />

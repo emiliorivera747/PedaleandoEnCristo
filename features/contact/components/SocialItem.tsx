@@ -3,15 +3,24 @@ import Link from "next/link";
 import { CldImage } from "next-cloudinary";
 
 interface SocialItemsProp {
-  href: string;
+  to: string;
   image_url: string;
-  alt: string;
+  label?: string;
 }
 
-const SocialItem = ({ href, image_url, alt }: SocialItemsProp) => {
+const SocialItem = ({ to, image_url, label }: SocialItemsProp) => {
   return (
-    <Link href={href}>
-      <CldImage alt={alt} src={image_url} width={100} height={100} />
+    <Link
+      href={to}
+      className="border rounded-[12px] p-6 border-primary-200 hover:bg-primary-200  w-[6rem] h-[6rem] flex items-center justify-center"
+    >
+      <CldImage
+        className=""
+        alt={label || ""}
+        src={image_url}
+        width={50}
+        height={50}
+      />
     </Link>
   );
 };

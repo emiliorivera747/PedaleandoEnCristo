@@ -10,7 +10,7 @@ const Footer = () => {
         </p>
         <p className="text-xs mt-2 text-tertiary-700">
           <a href="/privacy" className="hover:text-gray-400">
-            política de privacidad
+            Privacidad
           </a>{" "}
           |
           <a href="/terms" className="hover:text-gray-400 ml-2">
